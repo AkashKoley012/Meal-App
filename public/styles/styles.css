@@ -1,0 +1,283 @@
+/*? body */
+body {
+    margin: 0;
+    font-size: 16px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+/*? loader css */
+#loader {
+    width: 122rem;
+    height: 60rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 3.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+   }
+   
+   circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+   }
+   
+
+/*? navigation bar */
+#navigation {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    box-shadow: 0 0px 16px 10px rgba(0,0,0,.2);
+}
+
+.header {
+    margin: 1rem 25% !important;
+    font-size: 1.8rem !important;
+    color: black !important;
+}
+
+.nav-item {
+    margin: 1rem 2rem;
+    font-size: 1.5rem;
+    font-family: math;
+    font-weight: bold;
+    color: #c5c5c5;
+    cursor: pointer;
+}
+
+.active {
+    color: black;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+/*? input tag */
+.input {
+    width: 20rem;
+    position: absolute;
+    right: 10rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5,
+           -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
+   
+.input:focus {
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #e8e8e8;
+    box-shadow: 20px 20px 60px #c5c5c5,
+           -20px -20px 60px #ffffff;
+    transition: 0.3s;
+}
+
+/*? app css */
+#app {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0rem 2rem;
+    height: 91vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#app::-webkit-scrollbar {
+    display: none;
+}
+
+/*? card css */
+.card {
+    margin: 2rem;
+    text-align: center;
+    width: 25rem;
+    height: 34rem;
+    background: white;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   }
+   
+.shadow {
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0 0  0 2px rgb(190, 190, 190),
+                0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.big-card {
+    overflow: hidden;
+    display: flex;
+    margin: 2rem;
+    width: 122rem;
+    height: 50rem;
+    background: white;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+/*? card image */
+img {
+    height: 21rem;
+    width: 25rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.big-image {
+    height: auto;
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+}
+
+/*? card favorite */
+.favorite {
+    height: 0rem;
+    cursor: pointer;
+    position: relative;
+    top: -20rem;
+    left: 10rem;
+    font-size: 1.5rem;
+    color: red;
+}
+
+.big-favorite {
+    height: 0rem;
+    cursor: pointer;
+    position: relative;
+    top: 1.5rem;
+    left: 57rem;
+    font-size: 2.5rem;
+    color: red;
+}
+
+/*? card name */
+.name {
+    font-size: 1.2rem;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.big-name {
+    font-size: 3rem;
+    font-family: monospace;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+hr {
+    border-top: 1px solid lightgray;
+    width: 90%;
+}
+
+/*? grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.field {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: math;
+}
+
+.big-field {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: math;
+    margin-top: 1.2rem;
+}
+
+.big-tags {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: math;
+    margin-top: 1.2rem;
+}
+
+.title {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.instructions {
+    text-align: justify;
+    margin: 2rem 5rem;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.ingredient {
+    margin: -2rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.ingredient-item {
+    margin: 1rem 2rem 0rem 0rem;
+}
+
+.ingredient-name {
+    font-size: 1.2rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.ingredient-mesure {
+    font-size: 1rem;
+    font-family: math;
+}
+
+/*? grid button */
+.view {
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: 0.5rem 6rem;
+    border-radius: 8px;
+    color: white;
+    background-color: black;
+    border-width: 0px;
+}
