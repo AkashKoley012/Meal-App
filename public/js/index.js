@@ -47,6 +47,14 @@ const favoriteItem = () => {
     dispaly(data);
 };
 
+//! homeItems function
+const homeItems = () => {
+    loader.style.display = "flex";
+    app.innerHTML = "";
+    dispaly(meals);
+    loader.style.display = "none";
+};
+
 //!home page
 const home = async () => {
     if (localStorage.favorites_items) favorites_items = JSON.parse(localStorage.favorites_items);
@@ -155,7 +163,7 @@ navigation.addEventListener("click", (event) => {
     if (event.target.innerHTML === "Home") {
         document.querySelector(".active").classList.remove("active");
         event.target.classList.add("active");
-        home();
+        homeItems();
     }
 });
 
