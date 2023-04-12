@@ -49,7 +49,7 @@ const favoriteItem = () => {
 
 //!home page
 const home = async () => {
-    favorites_items = JSON.parse(localStorage.favorites_items);
+    if (localStorage.favorites_items) favorites_items = JSON.parse(localStorage.favorites_items);
 
     loader.style.display = "flex";
     app.innerHTML = "";
