@@ -72,7 +72,7 @@ const home = async () => {
 
 //! input change event
 const changeId = setInterval(() => {
-    if (input.value !== str && input.value.length > 0) {
+    if (input.value !== str) {
         // loader.style.display = "flex";
         app.innerHTML = "";
         let length = input.value.length;
